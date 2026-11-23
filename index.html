@@ -178,6 +178,13 @@ SOFTWARE.
     .highlight-name { font-weight: 600; color: var(--accent-color); }
     .author-legend { margin-block: -.3rem .75rem; color: var(--text-secondary); font-size: .9rem; }
     .author-marker { color: var(--accent-color); font-weight: 700; line-height: 0; }
+    .author-list summary { cursor: pointer; }
+    .author-list summary::marker { color: var(--accent-color); }
+    .publication-group {
+      margin-block-start: 1.65rem;
+      padding-block-start: 1.25rem;
+      border-top: 1px solid var(--border-color);
+    }
 
     footer {
       padding-block: .8rem 2rem;
@@ -255,7 +262,7 @@ SOFTWARE.
       </ul>
     </section>
 
-    <section class="publications" id="publications" aria-labelledby="publications-title" tabindex="-1">
+    <section class="publications" id="publications" aria-label="Publications" tabindex="-1">
       <h2 id="publications-title">Selected Publications</h2>
       <p class="author-legend">† First author · * Corresponding author</p>
       <ul class="entries">
@@ -268,11 +275,29 @@ SOFTWARE.
           </div>
         </li>
         <li>
-          <time class="date" datetime="2025">2025</time>
+          <time class="date" datetime="2026">2026</time>
           <div>
-            <h3><a href="https://link.springer.com/chapter/10.1007/978-3-032-07054-8_16">AI-Driven Supply Chain Transformation</a></h3>
-            <p class="pub-authors">Hau L. Lee<sup class="author-marker" title="First and corresponding author">†*</sup>, <strong class="highlight-name">Zhe Chen</strong>, Yongzhi Qi, Zuo-Jun Max Shen</p>
-            <p class="pub-venue">Book chapter in <cite>AI in Supply Chains</cite>, Springer, pp. 223–244 (first published online in 2025)</p>
+            <h3><a href="https://doi.org/10.1287/msom.2025.1065">OM Forum—Supply Chain Management in the AI Era: A Vision Statement from the Operations Management Community</a></h3>
+            <details class="author-list">
+              <summary class="pub-authors">
+                Maxime C. Cohen<sup class="author-marker" title="First and corresponding author">†*</sup>,
+                Tinglong Dai<sup class="author-marker" title="Corresponding author">*</sup>,
+                Georgia Perakis<sup class="author-marker" title="Corresponding author">*</sup>, …,
+                <strong class="highlight-name">Zhe Chen</strong>, et al.
+              </summary>
+              <p class="pub-authors">
+                Maxime C. Cohen<sup class="author-marker" title="First and corresponding author">†*</sup>,
+                Tinglong Dai<sup class="author-marker" title="Corresponding author">*</sup>,
+                Georgia Perakis<sup class="author-marker" title="Corresponding author">*</sup>,
+                Narendra Agrawal, Gad Allon, Robert N. Boute, Gérard P. Cachon, <strong class="highlight-name">Zhe Chen</strong>,
+                Morris Cohen, Rares Cristian, Vinayak Deshpande, Francis de Véricourt, Jan C. Fransoo, Joren Gijsbrechts,
+                Pavithra Harsha, Ming Hu, Pınar Keskinocak, Caleb Kwon, Hau Lee, Sheng Liu, Konstantina Mellou, Ishai Menache,
+                Jason Miller, Serguei Netessine, Tava Lennon Olsen, Jeevan Pathuri, Robert Peels, Yongzhi Qi, Ananth Raman,
+                Anne Robinson, Zuo-Jun Max Shen, Masha Shunko, David Simchi-Levi, Hannah Smalley, Jing-Sheng Song,
+                Jayashankar M. Swaminathan, Christopher Tang, Sridhar Tayur, Maxi Udenio, Jan Van Mieghem, Yuqian Xu, Dennis Zhang
+              </p>
+            </details>
+            <p class="pub-venue"><cite>Manufacturing &amp; Service Operations Management</cite>, 28(3), 687–705</p>
           </div>
         </li>
         <li>
@@ -292,6 +317,81 @@ SOFTWARE.
           </div>
         </li>
       </ul>
+
+      <div class="publication-group">
+        <h2>Additional Publications</h2>
+        <ul class="entries">
+          <li>
+            <time class="date" datetime="2025">2025</time>
+            <div>
+              <h3><a href="https://doi.org/10.1016/j.jtrangeo.2025.104335">Analyzing the propagation effect of high-speed rail from air passenger to air cargo traffic in China</a></h3>
+              <p class="pub-authors"><strong class="highlight-name">Zhe Chen</strong><sup class="author-marker" title="First author">†</sup>, Haowen Ni, Zhengli Wang<sup class="author-marker" title="Corresponding author">*</sup></p>
+              <p class="pub-venue"><cite>Journal of Transport Geography</cite>, 128, 104335</p>
+            </div>
+          </li>
+          <li>
+            <time class="date" datetime="2025">2025</time>
+            <div>
+              <h3><a href="https://link.springer.com/chapter/10.1007/978-3-032-07054-8_16">AI-Driven Supply Chain Transformation</a></h3>
+              <p class="pub-authors">Hau L. Lee<sup class="author-marker" title="First and corresponding author">†*</sup>, <strong class="highlight-name">Zhe Chen</strong>, Yongzhi Qi, Zuo-Jun Max Shen</p>
+              <p class="pub-venue">Book chapter in <cite>AI in Supply Chains</cite>, Springer, pp. 223–244 (first published online in 2025)</p>
+            </div>
+          </li>
+          <li>
+            <time class="date" datetime="2021">2021</time>
+            <div>
+              <h3><a href="https://doi.org/10.1016/j.tbs.2021.04.002">Quantifying the impact of weather on ride-hailing ridership: Evidence from Haikou, China</a></h3>
+              <p class="pub-authors">Shan Liu<sup class="author-marker" title="First author">†</sup>, Hai Jiang<sup class="author-marker" title="Corresponding author">*</sup>, <strong class="highlight-name">Zhe Chen</strong></p>
+              <p class="pub-venue"><cite>Travel Behaviour and Society</cite>, 24, 257–269</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="publication-group">
+        <h2>Preprints and Technical Reports</h2>
+        <ul class="entries">
+          <li>
+            <time class="date" datetime="2026">2026</time>
+            <div>
+              <h3><a href="https://arxiv.org/abs/2611.10521">TimeHF 2.0: Multimodal, Multivariate, and Multi-Region Collaborative Forecasting for Large-Scale Retail Supply Chains</a></h3>
+              <details class="author-list">
+                <summary class="pub-authors">
+                  Zhongxuan Han<sup class="author-marker" title="First author">†</sup>, …,
+                  <strong class="highlight-name">Zhe Chen</strong>, …, Yongzhi Qi<sup class="author-marker" title="Corresponding author">*</sup>, et al.
+                </summary>
+                <p class="pub-authors">
+                  Zhongxuan Han<sup class="author-marker" title="First author">†</sup>, Zhengxin Shi, Kunxiu Chen, Xiaolin Huang,
+                  Yulin Huang, Anni Zhang, Xiaoming Lin, Zhengyu Chen, Xue Yu, Yang Liu, Yuanyuan Yang, Yangyang Zhang,
+                  Junheng Huang, Dongyang Geng, Ben Zhang, Xin Wang, Jiaxin Wang, Haowei Zhou, Qiqi Yan, Jiaheng Yin, Jintao Xu,
+                  Zijiang Liu, Changfei Zhan, <strong class="highlight-name">Zhe Chen</strong>, Yutong Pan, Jinqiu Deng,
+                  Shaomin Li, Ningxuan Kang, Jianshen Zhang, Yongzhi Qi<sup class="author-marker" title="Corresponding author">*</sup>,
+                  Wei Qi, Dazhou Lei, Zuo-Jun Max Shen
+                </p>
+              </details>
+              <p class="pub-venue">Technical report, arXiv:2611.10521</p>
+            </div>
+          </li>
+          <li>
+            <time class="date" datetime="2026">2026</time>
+            <div>
+              <h3><a href="https://www.preprints.org/manuscript/202610.0845/v1">ScoAI: Toward OR-Native Decision Intelligence</a></h3>
+              <details class="author-list">
+                <summary class="pub-authors">
+                  Yang Liu<sup class="author-marker" title="First author">†</sup>, …,
+                  <strong class="highlight-name">Zhe Chen</strong>, Yongzhi Qi<sup class="author-marker" title="Corresponding author">*</sup>, et al.
+                </summary>
+                <p class="pub-authors">
+                  Yang Liu<sup class="author-marker" title="First author">†</sup>, Yulin Huang, Xue Yu, Haowei Zhou, Jiaxin Wang,
+                  Qiqi Yan, Tianqi Zhou, Yi Yao, Zhongxuan Han, Shaomin Li, Jianshen Zhang, <strong class="highlight-name">Zhe Chen</strong>,
+                  Yongzhi Qi<sup class="author-marker" title="Corresponding author">*</sup>, Wei Qi, Zuo-Jun (Max) Shen
+                </p>
+              </details>
+              <p class="pub-venue">Preprint, Preprints.org</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section id="education" aria-labelledby="education-title" tabindex="-1">
