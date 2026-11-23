@@ -155,7 +155,7 @@ SOFTWARE.
     .topic-list li:last-child, .entries li:last-child { padding-block-end: 0; }
     h3 { font-size: 1rem; line-height: 1.55; }
 
-    .topic-list p, .pub-authors, .pub-venue, .school-meta {
+    .topic-list p, .pub-authors, .pub-venue, .entry-meta {
       margin-block-start: .25rem;
       color: var(--text-secondary);
     }
@@ -173,7 +173,7 @@ SOFTWARE.
     }
 
     .publications h3 { font: 700 1.08rem/1.42 var(--serif); }
-    .pub-authors, .pub-venue, .school-meta { font-size: .9rem; }
+    .pub-authors, .pub-venue, .entry-meta { font-size: .9rem; }
     .pub-authors { line-height: 1.5; }
     .highlight-name { font-weight: 600; color: var(--accent-color); }
     .author-legend { margin-block: -.3rem .75rem; color: var(--text-secondary); font-size: .9rem; }
@@ -211,7 +211,7 @@ SOFTWARE.
       .topic-list li, .entries li { padding-block: .35rem; break-inside: avoid; }
       .entries li { grid-template-columns: 5rem minmax(0, 1fr); }
       h3, .publications h3 { font-size: 10pt; }
-      .pub-authors, .pub-venue, .school-meta, .author-legend { font-size: 9pt; }
+      .pub-authors, .pub-venue, .entry-meta, .author-legend { font-size: 9pt; }
       a { color: inherit; }
     }
   </style>
@@ -232,6 +232,7 @@ SOFTWARE.
 
   <nav class="site-nav" aria-label="Homepage sections">
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
     <a href="#education">Education</a>
@@ -242,6 +243,20 @@ SOFTWARE.
       <h2 id="about-title">About</h2>
       <p>I work on <strong>supply chain optimization and order fulfillment</strong> at JD.com. My work combines demand forecasting, operations research, and machine learning to improve inventory allocation and fulfillment decisions.</p>
       <p>I earned my bachelor's and doctoral degrees in the Department of Industrial Engineering at Tsinghua University. At the Institute of Operations Research and Statistics, my doctoral research examined how the introduction of high-speed rail relates to domestic air passenger and cargo traffic in China.</p>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-title" tabindex="-1">
+      <h2 id="experience-title">Professional Experience</h2>
+      <ul class="entries">
+        <li>
+          <p class="date"><time datetime="2021-08">Aug 2021</time>–Present</p>
+          <div>
+            <h3>JD.com</h3>
+            <p>Joined through JD.com's TGT program. My work focuses on inventory allocation, assortment planning for forward distribution centers, and order fulfillment.</p>
+            <p class="entry-meta"><a href="https://doi.org/10.1016/j.ejor.2026.04.040">Related research on warehouse product allocation and order splitting</a></p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <section id="research" aria-labelledby="research-title" tabindex="-1">
@@ -401,14 +416,14 @@ SOFTWARE.
           <p class="date"><time datetime="2016-09">2016.09</time>–<time datetime="2021-06">2021.06</time></p>
           <div>
             <h3>Tsinghua University · Ph.D.</h3>
-            <p class="school-meta">Department of Industrial Engineering, Institute of Operations Research and Statistics</p>
+            <p class="entry-meta">Department of Industrial Engineering, Institute of Operations Research and Statistics</p>
           </div>
         </li>
         <li>
           <p class="date"><time datetime="2012-09">2012.09</time>–<time datetime="2016-06">2016.06</time></p>
           <div>
             <h3>Tsinghua University · Bachelor's Degree</h3>
-            <p class="school-meta">Department of Industrial Engineering</p>
+            <p class="entry-meta">Department of Industrial Engineering</p>
           </div>
         </li>
       </ul>
