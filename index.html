@@ -25,14 +25,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="陈哲的学术主页。研究方向包括供应链运筹优化、电商履约和决策导向学习。">
+  <meta name="description" content="Zhe Chen's academic homepage. Research interests include supply chain optimization, e-commerce fulfillment, and decision-focused learning.">
   <meta name="theme-color" content="#ffffff">
   <meta name="author" content="Zhe Chen">
-  <title>陈哲 Zhe Chen | 学术主页</title>
+  <title>Zhe Chen | Academic Homepage</title>
   <style>
     :root {
       color-scheme: light;
@@ -41,7 +41,7 @@ SOFTWARE.
       --text-secondary: #4a5568;
       --accent-color: #3a5c9e;
       --border-color: #e2e8f0;
-      --serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif CJK SC", SimSun, serif;
+      --serif: Georgia, "Times New Roman", serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -84,18 +84,7 @@ SOFTWARE.
     .header-content { flex: 1; }
 
     h1 {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      column-gap: .85rem;
       font: 700 clamp(2.1rem, 6vw, 2.55rem)/1.2 var(--serif);
-    }
-
-    h1 span {
-      color: var(--text-secondary);
-      font-size: .75em;
-      font-weight: 400;
-      letter-spacing: -.035em;
     }
 
     .role {
@@ -187,6 +176,8 @@ SOFTWARE.
     .pub-authors, .pub-venue, .school-meta { font-size: .9rem; }
     .pub-authors { line-height: 1.5; }
     .highlight-name { font-weight: 600; color: var(--accent-color); }
+    .author-legend { margin-block: -.3rem .75rem; color: var(--text-secondary); font-size: .9rem; }
+    .author-marker { color: var(--accent-color); font-weight: 700; line-height: 0; }
 
     footer {
       padding-block: .8rem 2rem;
@@ -213,110 +204,111 @@ SOFTWARE.
       .topic-list li, .entries li { padding-block: .35rem; break-inside: avoid; }
       .entries li { grid-template-columns: 5rem minmax(0, 1fr); }
       h3, .publications h3 { font-size: 10pt; }
-      .pub-authors, .pub-venue, .school-meta { font-size: 9pt; }
+      .pub-authors, .pub-venue, .school-meta, .author-legend { font-size: 9pt; }
       a { color: inherit; }
     }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#about">跳到主要内容</a>
+  <a class="skip-link" href="#about">Skip to main content</a>
   <header>
     <div class="header-content">
-      <h1>陈哲 <span lang="en">Zhe Chen</span></h1>
-      <p class="role">京东 · 运筹优化与供应链研究</p>
+      <h1>Zhe Chen</h1>
+      <p class="role">Operations Research and Supply Chain Optimization · JD.com</p>
       <div class="social-links-header">
-        <a href="https://scholar.google.com/citations?user=n1bKL70AAAAJ" lang="en">Google Scholar</a>
-        <a href="https://github.com/chenzh12" lang="en">GitHub</a>
-        <button class="print-button" id="print-resume" type="button" hidden>打印简历</button>
+        <a href="https://scholar.google.com/citations?user=n1bKL70AAAAJ">Google Scholar</a>
+        <a href="https://github.com/chenzh12">GitHub</a>
+        <button class="print-button" id="print-resume" type="button" hidden>Print CV</button>
       </div>
     </div>
   </header>
 
-  <nav class="site-nav" aria-label="主页栏目">
-    <a href="#about">关于我</a>
-    <a href="#research">研究方向</a>
-    <a href="#publications">代表作</a>
-    <a href="#education">教育经历</a>
+  <nav class="site-nav" aria-label="Homepage sections">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#education">Education</a>
   </nav>
 
   <main>
     <section class="about" id="about" aria-labelledby="about-title" tabindex="-1">
-      <h2 id="about-title">关于我</h2>
-      <p>我在京东从事<strong>供应链与履约</strong>相关工作，主要研究如何结合需求预测、运筹优化与机器学习，改进库存配置和订单履约决策。</p>
-      <p>我在清华大学工业工程系完成本科和博士学习，博士阶段在运筹与统计研究所开展交通系统研究，关注高铁开通与民航客运、货运之间的关系。</p>
+      <h2 id="about-title">About</h2>
+      <p>I work on <strong>supply chain optimization and order fulfillment</strong> at JD.com. My work combines demand forecasting, operations research, and machine learning to improve inventory allocation and fulfillment decisions.</p>
+      <p>I earned my bachelor's and doctoral degrees in the Department of Industrial Engineering at Tsinghua University. At the Institute of Operations Research and Statistics, my doctoral research examined how the introduction of high-speed rail relates to domestic air passenger and cargo traffic in China.</p>
     </section>
 
     <section id="research" aria-labelledby="research-title" tabindex="-1">
-      <h2 id="research-title">研究方向</h2>
+      <h2 id="research-title">Research Interests</h2>
       <ul class="topic-list">
         <li>
-          <h3>电商供应链与履约</h3>
-          <p>研究前置仓选品、库存配置和订单拆分，关注库存成本与履约服务之间的权衡。</p>
+          <h3>E-commerce Supply Chains and Fulfillment</h3>
+          <p>I study assortment planning for forward distribution centers, inventory allocation, and order splitting, with a focus on trade-offs between inventory costs and fulfillment service levels.</p>
         </li>
         <li>
-          <h3>决策导向学习</h3>
-          <p>研究如何利用下游优化目标训练预测模型，并用决策结果评价预测。</p>
+          <h3>Decision-Focused Learning</h3>
+          <p>I study how to train predictive models using downstream optimization objectives and evaluate predictions by the quality of the resulting decisions.</p>
         </li>
         <li>
-          <h3>交通系统分析</h3>
-          <p>使用面板数据模型研究高铁开通与民航客运、货运之间的关系。</p>
+          <h3>Transportation Systems Analysis</h3>
+          <p>I use panel data models to study the relationship between high-speed rail entry and air passenger and cargo traffic.</p>
         </li>
       </ul>
     </section>
 
     <section class="publications" id="publications" aria-labelledby="publications-title" tabindex="-1">
-      <h2 id="publications-title">代表作</h2>
+      <h2 id="publications-title">Selected Publications</h2>
+      <p class="author-legend">† First author · * Corresponding author</p>
       <ul class="entries">
         <li>
           <time class="date" datetime="2026">2026</time>
           <div>
-            <h3 lang="en"><a href="https://doi.org/10.1016/j.ejor.2026.04.040">Optimizing warehouse product allocation at JD.com: A community detection-driven approach</a></h3>
-            <p class="pub-authors" lang="en">Hao Hu, Yongzhi Qi, Ningxuan Kang, <strong class="highlight-name">Zhe Chen</strong>, Ling Wang, Jian Chen, Zuo-Jun Max Shen</p>
-            <p class="pub-venue" lang="en"><cite>European Journal of Operational Research</cite>, 334(1), 315–335</p>
+            <h3><a href="https://doi.org/10.1016/j.ejor.2026.04.040">Optimizing warehouse product allocation at JD.com: A community detection-driven approach</a></h3>
+            <p class="pub-authors">Hao Hu<sup class="author-marker" title="First author">†</sup>, Yongzhi Qi, Ningxuan Kang, <strong class="highlight-name">Zhe Chen</strong><sup class="author-marker" title="Corresponding author">*</sup>, Ling Wang, Jian Chen, Zuo-Jun Max Shen</p>
+            <p class="pub-venue"><cite>European Journal of Operational Research</cite>, 334(1), 315–335</p>
           </div>
         </li>
         <li>
           <time class="date" datetime="2025">2025</time>
           <div>
-            <h3 lang="en"><a href="https://link.springer.com/chapter/10.1007/978-3-032-07054-8_16">AI-Driven Supply Chain Transformation</a></h3>
-            <p class="pub-authors" lang="en">Hau L. Lee, <strong class="highlight-name">Zhe Chen</strong>, Yongzhi Qi, Zuo-Jun Max Shen</p>
-            <p class="pub-venue">Springer 书籍章节，<cite lang="en">AI in Supply Chains</cite>, 223–244（2025 年在线发布）</p>
+            <h3><a href="https://link.springer.com/chapter/10.1007/978-3-032-07054-8_16">AI-Driven Supply Chain Transformation</a></h3>
+            <p class="pub-authors">Hau L. Lee<sup class="author-marker" title="First and corresponding author">†*</sup>, <strong class="highlight-name">Zhe Chen</strong>, Yongzhi Qi, Zuo-Jun Max Shen</p>
+            <p class="pub-venue">Book chapter in <cite>AI in Supply Chains</cite>, Springer, pp. 223–244 (first published online in 2025)</p>
           </div>
         </li>
         <li>
           <time class="date" datetime="2020">2020</time>
           <div>
-            <h3 lang="en"><a href="https://doi.org/10.1016/j.tra.2020.10.002">Impacts of high-speed rail on domestic air cargo traffic in China</a></h3>
-            <p class="pub-authors" lang="en"><strong class="highlight-name">Zhe Chen</strong>, Hai Jiang</p>
-            <p class="pub-venue" lang="en"><cite>Transportation Research Part A: Policy and Practice</cite>, 142, 1–13</p>
+            <h3><a href="https://doi.org/10.1016/j.tra.2020.10.002">Impacts of high-speed rail on domestic air cargo traffic in China</a></h3>
+            <p class="pub-authors"><strong class="highlight-name">Zhe Chen</strong><sup class="author-marker" title="First author">†</sup>, Hai Jiang<sup class="author-marker" title="Corresponding author">*</sup></p>
+            <p class="pub-venue"><cite>Transportation Research Part A: Policy and Practice</cite>, 142, 1–13</p>
           </div>
         </li>
         <li>
           <time class="date" datetime="2019">2019</time>
           <div>
-            <h3 lang="en"><a href="https://doi.org/10.1016/j.tra.2019.07.004">Analyzing the heterogeneous impacts of high-speed rail entry on air travel in China: A hierarchical panel regression approach</a></h3>
-            <p class="pub-authors" lang="en"><strong class="highlight-name">Zhe Chen</strong>, Zhengli Wang, Hai Jiang</p>
-            <p class="pub-venue" lang="en"><cite>Transportation Research Part A: Policy and Practice</cite>, 127, 86–98</p>
+            <h3><a href="https://doi.org/10.1016/j.tra.2019.07.004">Analyzing the heterogeneous impacts of high-speed rail entry on air travel in China: A hierarchical panel regression approach</a></h3>
+            <p class="pub-authors"><strong class="highlight-name">Zhe Chen</strong><sup class="author-marker" title="First author">†</sup>, Zhengli Wang, Hai Jiang<sup class="author-marker" title="Corresponding author">*</sup></p>
+            <p class="pub-venue"><cite>Transportation Research Part A: Policy and Practice</cite>, 127, 86–98</p>
           </div>
         </li>
       </ul>
     </section>
 
     <section id="education" aria-labelledby="education-title" tabindex="-1">
-      <h2 id="education-title">教育经历</h2>
+      <h2 id="education-title">Education</h2>
       <ul class="entries">
         <li>
           <p class="date"><time datetime="2016-09">2016.09</time>–<time datetime="2021-06">2021.06</time></p>
           <div>
-            <h3>清华大学 · 博士</h3>
-            <p class="school-meta">工业工程系，运筹与统计研究所</p>
+            <h3>Tsinghua University · Ph.D.</h3>
+            <p class="school-meta">Department of Industrial Engineering, Institute of Operations Research and Statistics</p>
           </div>
         </li>
         <li>
           <p class="date"><time datetime="2012-09">2012.09</time>–<time datetime="2016-06">2016.06</time></p>
           <div>
-            <h3>清华大学 · 本科</h3>
-            <p class="school-meta">工业工程系</p>
+            <h3>Tsinghua University · Bachelor's Degree</h3>
+            <p class="school-meta">Department of Industrial Engineering</p>
           </div>
         </li>
       </ul>
@@ -324,8 +316,8 @@ SOFTWARE.
   </main>
 
   <footer>
-    更新于 <time datetime="2026-11-23">2026 年 11 月 23 日</time>。
-    页面改编自 <a href="https://github.com/yuhui-zh15/Minimal-Academic-Website" lang="en">Minimal Academic Website</a>。
+    Last updated <time datetime="2026-11-23">November 23, 2026</time>.
+    Design adapted from <a href="https://github.com/yuhui-zh15/Minimal-Academic-Website">Minimal Academic Website</a>.
   </footer>
 
   <script>
