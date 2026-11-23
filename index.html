@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="陈哲的个人简历。研究方向包括供应链运筹优化、电商履约和决策导向学习。">
+  <meta name="theme-color" content="#f1f5ef">
+  <title>陈哲 Zhe Chen | 个人简历</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f1f5ef;
+      --ink: #152d29;
+      --muted: #435d55;
+      --line: #bfcdc3;
+      --forest: #133c34;
+      --lime: #d4ef93;
+      --white: #fbfdfa;
+      --shell: 70rem;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-padding-block-start: 1.25rem; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1rem/1.72 "Inter", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+    }
+
+    h1, h2, h3, p, figure, ul, ol { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
+    a { color: var(--forest); text-underline-offset: .24em; }
+    a:hover { text-decoration-thickness: .15em; }
+
+    :focus-visible {
+      outline: .15rem solid #466918;
+      outline-offset: .24rem;
+    }
+
+    .shell {
+      width: min(var(--shell), calc(100% - 4rem));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      z-index: 1;
+      background: var(--white);
+      padding: .5rem 1rem;
+      transform: translateY(-120%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block: 1.2rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      color: var(--ink);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem clamp(.7rem, 2.7vw, 2rem);
+      font-size: .875rem;
+    }
+
+    .site-nav a { text-decoration: none; }
+    .site-nav a:hover { text-decoration: underline; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      align-items: stretch;
+      gap: clamp(1.65rem, 5vw, 5rem);
+      padding-block: clamp(2.5rem, 7vw, 5.65rem);
+    }
+
+    .intro { align-self: center; }
+
+    h1 {
+      font-size: clamp(4rem, 9vw, 7rem);
+      font-weight: 800;
+      line-height: .99;
+      letter-spacing: -.085em;
+    }
+
+    .english-name {
+      display: block;
+      margin-block-start: .72rem;
+      color: var(--forest);
+      font: 400 clamp(1.8rem, 4.4vw, 3rem)/1.05 Georgia, "Times New Roman", serif;
+      letter-spacing: -.065em;
+    }
+
+    .specialty {
+      margin-block-start: 1.55rem;
+      font-size: clamp(1.12rem, 2vw, 1.35rem);
+      font-weight: 700;
+    }
+
+    .bio {
+      max-width: 29rem;
+      margin-block-start: .55rem;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .75rem 1.25rem;
+      margin-block-start: 1.5rem;
+    }
+
+    .primary-link {
+      border-radius: .4rem;
+      padding: .57rem .92rem;
+      background: var(--forest);
+      color: var(--white);
+      font-size: .925rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .primary-link:hover { background: #20564a; }
+
+    .print-button {
+      border: 0;
+      padding: .45rem .2rem;
+      background: transparent;
+      color: var(--forest);
+      font: inherit;
+      font-size: .925rem;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: .24em;
+    }
+
+    .diagram {
+      position: relative;
+      min-height: 20rem;
+      isolation: isolate;
+      overflow: hidden;
+      border-radius: .65rem 3.8rem .65rem .65rem;
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    .diagram::before {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: radial-gradient(circle, #b7d9c85c 1px, transparent 1.4px) 0 0 / 19px 19px;
+      mask-image: linear-gradient(138deg, #000 20%, #0003 85%);
+      content: "";
+    }
+
+    .diagram-track {
+      position: absolute;
+      inset: 13% 10% 13%;
+    }
+
+    .diagram-links {
+      position: absolute;
+      top: 25%;
+      right: 13%;
+      bottom: 25%;
+      left: 68%;
+      border: solid #9abfa9;
+      border-width: 1px 0 1px 1px;
+    }
+
+    .diagram-track::before {
+      position: absolute;
+      top: 50%;
+      right: 32%;
+      left: 13%;
+      border-top: 1px solid #9abfa9;
+      content: "";
+    }
+
+    .diagram-node {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      width: 4.5rem;
+      aspect-ratio: 1;
+      transform: translate(-50%, -50%);
+      border: 1px solid #9abfa9;
+      border-radius: 50%;
+      background: var(--forest);
+      color: var(--white);
+      font-size: .875rem;
+      font-weight: 650;
+    }
+
+    .node-demand { top: 50%; left: 13%; }
+    .node-decision {
+      top: 50%;
+      left: 50%;
+      width: 5.55rem;
+      border-color: var(--lime);
+      background: var(--lime);
+      color: var(--ink);
+      box-shadow: 0 0 0 .4rem #d4ef932e;
+    }
+
+    .node-stock { top: 25%; left: 87%; }
+    .node-service { top: 75%; left: 87%; }
+
+    .section-title {
+      margin-block-end: 1.05rem;
+      font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+      line-height: 1.25;
+      letter-spacing: -.025em;
+    }
+
+    .focus-section {
+      padding-block: 1.6rem 2.3rem;
+      border-block: 1px solid var(--line);
+    }
+
+    .focus-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem clamp(1.4rem, 4vw, 3.5rem);
+    }
+
+    .focus-list h3, .education h3 { font-size: 1.04rem; }
+    .focus-list p { margin-block-start: .32rem; color: var(--muted); }
+
+    .details {
+      display: grid;
+      grid-template-columns: minmax(13rem, .77fr) minmax(0, 1.75fr);
+      gap: 2.25rem clamp(2rem, 8vw, 7rem);
+      padding-block: clamp(2.5rem, 6vw, 4.1rem);
+    }
+
+    .education li, .publications li {
+      padding-block: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .education p, .publication-meta {
+      margin-block-start: .25rem;
+      color: var(--muted);
+      font-size: .875rem;
+    }
+
+    .publication-title {
+      font-size: 1.075rem;
+      font-weight: 700;
+      line-height: 1.46;
+    }
+
+    .publications li {
+      display: grid;
+      grid-template-columns: 3.3rem minmax(0, 1fr);
+      gap: .5rem;
+    }
+
+    .publication-year {
+      color: var(--muted);
+      font-size: .875rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .site-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block: 1.25rem 2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .875rem;
+    }
+
+    @media (max-width: 45rem) {
+      .shell { width: calc(100% - 2rem); }
+      .hero, .details { grid-template-columns: minmax(0, 1fr); }
+      .hero { gap: 1.75rem; }
+      .diagram { min-height: 15.5rem; }
+      .focus-list { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    @media (max-width: 24rem) {
+      .site-header { align-items: flex-start; flex-direction: column; gap: .45rem; }
+      .diagram-node { width: 3.5rem; font-size: .8125rem; }
+      .node-decision { width: 4.35rem; }
+    }
+
+    @page { margin: 16mm; }
+
+    @media print {
+      body { background: #fff; color: #000; font-size: 10pt; }
+      .shell { width: 100%; }
+      .skip-link, .site-header, .diagram, .hero-actions, .site-footer { display: none; }
+      .hero { display: block; padding-block: 0 1rem; }
+      h1 { font-size: 32pt; }
+      .english-name { font-size: 17pt; }
+      .specialty { margin-block-start: .6rem; font-size: 12pt; }
+      .bio { max-width: none; }
+      .section-title { font-size: 13pt; }
+      .focus-section, .details { padding-block: 1rem; }
+      .focus-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .details { grid-template-columns: 1fr 2.2fr; gap: 1.25rem; }
+      .education li, .publications li { padding-block: .45rem; break-inside: avoid; }
+      .publication-title, .focus-list h3, .education h3 { font-size: 10pt; }
+      .publication-meta, .publication-year, .education p { font-size: 9pt; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#about">跳到主要内容</a>
+  <header class="site-header shell">
+    <a class="brand" href="#top">陈哲</a>
+    <nav class="site-nav" aria-label="简历导航">
+      <a href="#research">研究方向</a>
+      <a href="#publications">代表作</a>
+      <a href="#education">教育经历</a>
+    </nav>
+  </header>
+
+  <main class="shell" id="about">
+    <section class="hero" aria-labelledby="name">
+      <div class="intro">
+        <h1 id="name">陈哲 <span class="english-name" lang="en">Zhe Chen</span></h1>
+        <p class="specialty">运筹优化与供应链研究</p>
+        <p class="bio">清华大学工业工程博士，在京东从事供应链与履约相关工作。我关注如何将需求预测、运筹优化和机器学习用于库存配置与履约决策。</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="https://scholar.google.com/citations?user=n1bKL70AAAAJ">Google Scholar</a>
+          <button class="print-button" id="print-resume" type="button" hidden>打印简历</button>
+        </div>
+      </div>
+      <figure class="diagram" role="img" aria-label="需求预测进入优化模型，用于库存配置和履约决策。">
+        <div class="diagram-track" aria-hidden="true">
+          <span class="diagram-links"></span>
+          <span class="diagram-node node-demand">需求</span>
+          <span class="diagram-node node-decision">优化</span>
+          <span class="diagram-node node-stock">库存</span>
+          <span class="diagram-node node-service">履约</span>
+        </div>
+      </figure>
+    </section>
+
+    <section class="focus-section" id="research" aria-labelledby="research-title">
+      <h2 class="section-title" id="research-title">研究方向</h2>
+      <ul class="focus-list">
+        <li>
+          <h3>电商供应链与履约</h3>
+          <p>研究前置仓选品、库存配置和订单拆分，关注库存成本与履约服务之间的权衡。</p>
+        </li>
+        <li>
+          <h3>决策导向学习</h3>
+          <p>研究如何利用下游优化目标训练预测模型，并用决策结果评价预测。</p>
+        </li>
+        <li>
+          <h3>交通系统分析</h3>
+          <p>使用面板数据模型研究高铁开通与民航客运、货运之间的关系。</p>
+        </li>
+      </ul>
+    </section>
+
+    <div class="details">
+      <section class="education" id="education" aria-labelledby="education-title">
+        <h2 class="section-title" id="education-title">教育经历</h2>
+        <ul>
+          <li>
+            <h3>清华大学 · 博士</h3>
+            <p>工业工程系，运筹与统计研究所</p>
+            <p><time datetime="2016-09">2016.09</time>–<time datetime="2021-06">2021.06</time></p>
+          </li>
+          <li>
+            <h3>清华大学 · 本科</h3>
+            <p>工业工程系</p>
+            <p><time datetime="2012-09">2012.09</time>–<time datetime="2016-06">2016.06</time></p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="publications" id="publications" aria-labelledby="publications-title">
+        <h2 class="section-title" id="publications-title">代表作</h2>
+        <ul>
+          <li>
+            <time class="publication-year" datetime="2026">2026</time>
+            <div>
+              <h3 class="publication-title" lang="en"><a href="https://doi.org/10.1016/j.ejor.2026.04.040">Optimizing warehouse product allocation at JD.com: A community detection-driven approach</a></h3>
+              <p class="publication-meta"><span lang="en">European Journal of Operational Research</span>, 334(1), 315–335</p>
+            </div>
+          </li>
+          <li>
+            <time class="publication-year" datetime="2025">2025</time>
+            <div>
+              <h3 class="publication-title" lang="en"><a href="https://link.springer.com/chapter/10.1007/978-3-032-07054-8_16">AI-Driven Supply Chain Transformation</a></h3>
+              <p class="publication-meta">Springer 书籍章节 · <span lang="en">AI in Supply Chains</span>（2025 年在线发布）</p>
+            </div>
+          </li>
+          <li>
+            <time class="publication-year" datetime="2020">2020</time>
+            <div>
+              <h3 class="publication-title" lang="en"><a href="https://doi.org/10.1016/j.tra.2020.10.002">Impacts of high-speed rail on domestic air cargo traffic in China</a></h3>
+              <p class="publication-meta"><span lang="en">Transportation Research Part A: Policy and Practice</span>, 142, 1–13</p>
+            </div>
+          </li>
+          <li>
+            <time class="publication-year" datetime="2019">2019</time>
+            <div>
+              <h3 class="publication-title" lang="en"><a href="https://doi.org/10.1016/j.tra.2019.07.004">Analyzing the heterogeneous impacts of high-speed rail entry on air travel in China: A hierarchical panel regression approach</a></h3>
+              <p class="publication-meta"><span lang="en">Transportation Research Part A: Policy and Practice</span>, 127, 86–98</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer shell">
+    <span>陈哲 <span lang="en">Zhe Chen</span></span>
+    <a href="#top">返回顶部</a>
+  </footer>
+  <script>
+    const printButton = document.querySelector('#print-resume');
+    printButton.addEventListener('click', () => window.print());
+    printButton.hidden = false;
+  </script>
+</body>
+</html>
